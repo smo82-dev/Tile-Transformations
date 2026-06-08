@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Tiling Services NZ"
+version = "1.0.0"
+id = "artifacts/tiling-services"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24917
+
+[services.development]
+run = "pnpm --filter @workspace/tiling-services run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/tiling-services", "run", "build" ]
+publicDir = "artifacts/tiling-services/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24917"
+BASE_PATH = "/"

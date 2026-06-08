@@ -1,0 +1,26 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "BPSdj0ddk7_c9cbLiIelO"
+uri = "file://artifacts/tiling-services/public/assets/before-bathroom.png"
+type = "image"
+title = "Before bathroom transformation"
+
+[[generated]]
+id = "r9MZ3jam8yMhV_biVZAuG"
+uri = "file://artifacts/tiling-services/public/assets/after-bathroom.png"
+type = "image"
+title = "After bathroom transformation"
+
+[[generated]]
+id = "86zU5WYPfK9QvcHb99x2I"
+uri = "file://artifacts/tiling-services/public/assets/extra-white-bathroom.png"
+type = "image"
+title = "Crisp white bathroom"
+
+[[generated]]
+id = "g_bOSANWfeRM1rPxTuzac"
+uri = "file://artifacts/tiling-services/public/assets/extra-black-bathroom.png"
+type = "image"
+title = "Dramatic black tile wall"
