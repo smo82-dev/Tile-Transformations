@@ -11,17 +11,19 @@ export function AboutSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative"
+            className="relative flex justify-center lg:justify-start"
           >
-            <div className="aspect-[3/4] overflow-hidden">
-              <img 
-                src="/assets/owner.jpg" 
-                alt="Josh van Baarle, Owner-Operator" 
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-              />
+            <div className="relative w-48 md:w-56">
+              <div className="aspect-[3/4] overflow-hidden">
+                <img 
+                  src="/assets/owner.jpg" 
+                  alt="Josh van Baarle, Owner-Operator" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-primary z-[-1] hidden md:block" />
+              <div className="absolute top-4 -left-4 w-10 h-10 border border-background/20 z-[-1] hidden md:block" />
             </div>
-            <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-primary z-[-1] hidden md:block" />
-            <div className="absolute top-8 -left-8 w-24 h-24 border border-background/20 z-[-1] hidden md:block" />
           </motion.div>
 
           <motion.div 
