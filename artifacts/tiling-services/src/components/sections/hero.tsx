@@ -14,7 +14,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section id="hero" className="relative min-h-[100dvh] flex flex-col justify-end lg:justify-center overflow-hidden bg-background">
+    <section id="hero" className="relative min-h-[100dvh] flex flex-col justify-end lg:justify-start overflow-hidden bg-background">
 
       {/* Video Background */}
       <div className="absolute inset-0 w-full h-full">
@@ -33,7 +33,7 @@ export function Hero() {
         />
       </div>
 
-      <div className="container mx-auto px-6 relative z-20 pb-24 pt-48 lg:py-0">
+      <div className="container mx-auto px-6 relative z-20 pb-24 pt-48 lg:pt-[clamp(8rem,18vh,12rem)]">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-12 max-w-7xl mx-auto">
           
           <div className="max-w-3xl">
