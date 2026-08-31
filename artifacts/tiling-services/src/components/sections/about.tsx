@@ -5,7 +5,6 @@ export function AboutSection() {
   return (
     <section id="about" className="py-32 bg-secondary relative overflow-hidden border-t border-white/5">
 
-      {/* Abstract Background Element */}
       <div className="absolute -left-[10%] top-0 w-[40%] h-full bg-background transform -skew-x-12 opacity-50 z-0 hidden lg:block" />
 
       <div className="container mx-auto px-6 relative z-10">
@@ -70,11 +69,12 @@ export function AboutSection() {
                 <img
                   src={assetPath("assets/owner.jpg")}
                   alt="Josh van Baarle, Owner-Operator"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover filter grayscale-[40%] contrast-125 transition-transform duration-1000 hover:scale-105"
                 />
               </div>
 
-              {/* Decorative accents */}
               <div className="absolute -bottom-6 -left-6 w-24 h-24 border-b border-l border-primary/50 pointer-events-none hidden md:block" />
               <div className="absolute -top-6 -right-6 w-24 h-24 border-t border-r border-primary/50 pointer-events-none hidden md:block" />
             </div>
