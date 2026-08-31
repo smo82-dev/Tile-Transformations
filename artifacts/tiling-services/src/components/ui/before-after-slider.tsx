@@ -65,11 +65,12 @@ export function BeforeAfterSlider({ beforeImage, afterImage }: BeforeAfterSlider
       aria-valuemax={100}
       aria-label="Image comparison slider"
     >
-      {/* After image (base) */}
       <div className="absolute inset-0 w-full h-full bg-secondary">
         <img 
           src={afterImage} 
-          alt="After transformation" 
+          alt="After transformation"
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover pointer-events-none" 
         />
         <div className="absolute top-6 right-6 bg-black/80 backdrop-blur-sm border border-white/10 text-white px-5 py-2 text-xs font-bold uppercase tracking-[0.2em]">
@@ -77,14 +78,15 @@ export function BeforeAfterSlider({ beforeImage, afterImage }: BeforeAfterSlider
         </div>
       </div>
       
-      {/* Before image (clipped) */}
       <div 
         className="absolute inset-0 w-full h-full overflow-hidden bg-secondary"
         style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
       >
         <img 
           src={beforeImage} 
-          alt="Before transformation" 
+          alt="Before transformation"
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover pointer-events-none filter grayscale-[30%]"
         />
         <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-sm border border-black/10 text-black px-5 py-2 text-xs font-bold uppercase tracking-[0.2em]">
@@ -92,10 +94,9 @@ export function BeforeAfterSlider({ beforeImage, afterImage }: BeforeAfterSlider
         </div>
       </div>
       
-      {/* Slider Divider */}
       <div 
         className="absolute top-0 bottom-0 w-[2px] bg-primary z-10 transition-transform duration-75 shadow-[0_0_15px_rgba(216,141,84,0.5)]"
-        style={{ left: `${sliderPosition}%`, transform: 'translateX(-50%)' }}
+        style={{ left: `${sliderPosition}%`, transform: "translateX(-50%)" }}
       >
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-16 bg-background border border-primary text-primary flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.8)] transition-transform hover:scale-105">
           <MoveHorizontal className="w-5 h-5" />

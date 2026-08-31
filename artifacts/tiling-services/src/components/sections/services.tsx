@@ -79,7 +79,13 @@ export function ServicesSection() {
             transition={{ delay: 0.2 }}
             className="hidden md:block"
           >
-            <img src={assetPath("assets/logo-icon.png")} alt="Logo Motif" className="w-16 h-16 opacity-[0.03] invert brightness-0" />
+            <img
+              src={assetPath("assets/logo-icon.png")}
+              alt="Logo Motif"
+              loading="lazy"
+              decoding="async"
+              className="w-16 h-16 opacity-[0.03] invert brightness-0"
+            />
           </motion.div>
         </div>
 
@@ -113,11 +119,12 @@ export function ServicesSection() {
                 </ul>
               </div>
 
-              {/* Hover Image Reveal (Desktop only) */}
               <div className="absolute inset-0 z-0 opacity-0 group-hover:opacity-10 pointer-events-none transition-opacity duration-700 hidden lg:block overflow-hidden">
                 <img
                   src={service.image}
                   alt=""
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover filter grayscale"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />

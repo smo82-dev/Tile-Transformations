@@ -19,7 +19,9 @@ export function TestimonialsSection() {
             <div className="absolute inset-0 border border-white/10 z-10 pointer-events-none translate-x-4 translate-y-4" />
             <img 
               src={assetPath("assets/testimonial-bathroom.jpg")} 
-              alt="Finished bathroom tiling" 
+              alt="Finished bathroom tiling"
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover filter grayscale-[20%] contrast-125"
             />
           </motion.div>
