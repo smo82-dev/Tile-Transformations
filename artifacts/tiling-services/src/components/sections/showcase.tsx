@@ -51,6 +51,8 @@ export function ShowcaseSection() {
               <img
                 src={img.src}
                 alt={img.alt}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover filter grayscale-[15%] contrast-[1.1] transition-transform duration-1000 group-hover:scale-105 group-hover:grayscale-0"
               />
             </motion.div>
