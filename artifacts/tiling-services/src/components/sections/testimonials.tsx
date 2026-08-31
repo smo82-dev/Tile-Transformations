@@ -4,52 +4,51 @@ import { assetPath } from "@/lib/asset-path";
 
 export function TestimonialsSection() {
   return (
-    <section id="testimonials" className="py-32 bg-background relative overflow-hidden">
-      {/* Background Graphic */}
-      <div className="absolute right-0 top-0 w-1/3 h-full opacity-5 pointer-events-none hidden lg:block">
-        <img src={assetPath("assets/logo-icon.png")} alt="" className="w-full h-full object-cover object-left" />
-      </div>
+    <section id="testimonials" className="py-32 bg-background border-t border-white/5 relative overflow-hidden">
 
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           
           <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="w-full lg:w-5/12 aspect-[4/5] relative"
           >
+            <div className="absolute inset-0 border border-white/10 z-10 pointer-events-none translate-x-4 translate-y-4" />
             <img 
               src={assetPath("assets/testimonial-bathroom.jpg")} 
               alt="Finished bathroom tiling" 
-              className="w-full h-full object-cover shadow-2xl"
+              className="w-full h-full object-cover filter grayscale-[20%] contrast-125"
             />
-            <div className="absolute -left-6 -bottom-6 w-32 h-32 bg-accent -z-10" />
           </motion.div>
 
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="w-full lg:w-7/12 relative"
+            transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            className="w-full lg:w-7/12 relative lg:pl-12"
           >
-            <Quote className="absolute -top-10 -left-6 w-24 h-24 text-primary/10 -z-10 rotate-180" />
+            <Quote className="absolute -top-12 -left-2 w-32 h-32 text-white/[0.03] -z-10 rotate-180" />
             
-            <span className="text-primary font-semibold tracking-widest uppercase text-sm mb-8 block">
-              Client Experience
-            </span>
+            <div className="flex items-center gap-4 mb-10">
+              <div className="w-8 h-[1px] bg-primary" />
+              <span className="text-primary font-bold tracking-[0.2em] uppercase text-xs">
+                Client Experience
+              </span>
+            </div>
             
-            <blockquote className="text-2xl md:text-4xl font-serif text-foreground leading-snug mb-10">
-              "Josh did a fabulous job tiling both our family bathroom and ensuite. He is very thorough and paid close attention to the details. He is very easy to deal with - reliable and great communication. And just a good guy, happy to recommend."
+            <blockquote className="text-2xl md:text-4xl lg:text-5xl font-display text-foreground leading-[1.2] mb-12 uppercase tracking-tight">
+              "Josh did a fabulous job. He is very thorough and paid <span className="text-primary">close attention to the details.</span> Reliable and great communication."
             </blockquote>
             
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-1 bg-primary" />
+            <div className="flex items-center gap-6">
+              <div className="w-12 h-[2px] bg-white/20" />
               <div>
-                <p className="font-semibold text-foreground uppercase tracking-wide">Tessa</p>
-                <p className="text-muted-foreground font-light text-sm">Kelson Resident</p>
+                <p className="font-display font-bold text-foreground uppercase tracking-[0.15em]">Tessa</p>
+                <p className="text-muted-foreground font-light text-xs tracking-widest uppercase mt-1">Kelson Resident</p>
               </div>
             </div>
           </motion.div>

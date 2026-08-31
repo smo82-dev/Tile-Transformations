@@ -37,10 +37,18 @@ export function BeforeAfterSlider({ beforeImage, afterImage }: BeforeAfterSlider
     setIsDragging(false);
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "ArrowLeft") {
+      setSliderPosition((prev) => Math.max(0, prev - 5));
+    } else if (e.key === "ArrowRight") {
+      setSliderPosition((prev) => Math.min(100, prev + 5));
+    }
+  };
+
   return (
     <div
       ref={containerRef}
-      className="relative w-full aspect-[4/3] md:aspect-[16/9] overflow-hidden rounded-none shadow-2xl cursor-ew-resize select-none"
+      className="relative w-full aspect-[4/3] md:aspect-[21/9] overflow-hidden rounded-none shadow-[0_20px_50px_rgba(0,0,0,0.5)] cursor-ew-resize select-none border border-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
       onMouseDown={(e) => handlePointerDown(e.clientX)}
       onMouseMove={handleMouseMove}
       onMouseUp={handlePointerUp}
@@ -49,41 +57,48 @@ export function BeforeAfterSlider({ beforeImage, afterImage }: BeforeAfterSlider
       onTouchMove={handleTouchMove}
       onTouchEnd={handlePointerUp}
       onTouchCancel={handlePointerUp}
+      onKeyDown={handleKeyDown}
+      tabIndex={0}
+      role="slider"
+      aria-valuenow={sliderPosition}
+      aria-valuemin={0}
+      aria-valuemax={100}
+      aria-label="Image comparison slider"
     >
       {/* After image (base) */}
-      <div className="absolute inset-0 w-full h-full">
+      <div className="absolute inset-0 w-full h-full bg-secondary">
         <img 
           src={afterImage} 
           alt="After transformation" 
           className="w-full h-full object-cover pointer-events-none" 
         />
-        <div className="absolute bottom-4 right-4 bg-background/90 text-foreground px-4 py-1 text-sm font-semibold uppercase tracking-wider">
+        <div className="absolute top-6 right-6 bg-black/80 backdrop-blur-sm border border-white/10 text-white px-5 py-2 text-xs font-bold uppercase tracking-[0.2em]">
           After
         </div>
       </div>
       
       {/* Before image (clipped) */}
       <div 
-        className="absolute inset-0 w-full h-full overflow-hidden"
+        className="absolute inset-0 w-full h-full overflow-hidden bg-secondary"
         style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
       >
         <img 
           src={beforeImage} 
           alt="Before transformation" 
-          className="w-full h-full object-cover pointer-events-none" 
+          className="w-full h-full object-cover pointer-events-none filter grayscale-[30%]"
         />
-        <div className="absolute bottom-4 left-4 bg-foreground/90 text-background px-4 py-1 text-sm font-semibold uppercase tracking-wider">
+        <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-sm border border-black/10 text-black px-5 py-2 text-xs font-bold uppercase tracking-[0.2em]">
           Before
         </div>
       </div>
       
       {/* Slider Divider */}
       <div 
-        className="absolute top-0 bottom-0 w-1 bg-white z-10 transition-transform duration-75"
+        className="absolute top-0 bottom-0 w-[2px] bg-primary z-10 transition-transform duration-75 shadow-[0_0_15px_rgba(216,141,84,0.5)]"
         style={{ left: `${sliderPosition}%`, transform: 'translateX(-50%)' }}
       >
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.3)] transition-transform hover:scale-110">
-          <MoveHorizontal className="w-6 h-6" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-16 bg-background border border-primary text-primary flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.8)] transition-transform hover:scale-105">
+          <MoveHorizontal className="w-5 h-5" />
         </div>
       </div>
     </div>
