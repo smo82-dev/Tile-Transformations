@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { assetPath } from "@/lib/asset-path";
 
 export function Hero() {
   return (
@@ -18,7 +19,7 @@ export function Hero() {
             className="mb-8"
           >
             <img 
-              src="/assets/logo-icon.png" 
+              src={assetPath("assets/logo-icon.png")} 
               alt="Tiling Services Ltd Logo Mark" 
               className="w-24 h-24 md:w-32 md:h-32 object-contain mx-auto"
             />

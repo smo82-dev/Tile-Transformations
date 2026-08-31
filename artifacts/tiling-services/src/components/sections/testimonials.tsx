@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
+import { assetPath } from "@/lib/asset-path";
 
 export function TestimonialsSection() {
   return (
     <section id="testimonials" className="py-32 bg-background relative overflow-hidden">
       {/* Background Graphic */}
       <div className="absolute right-0 top-0 w-1/3 h-full opacity-5 pointer-events-none hidden lg:block">
-        <img src="/assets/logo-icon.png" alt="" className="w-full h-full object-cover object-left" />
+        <img src={assetPath("assets/logo-icon.png")} alt="" className="w-full h-full object-cover object-left" />
       </div>
 
       <div className="container mx-auto px-6">
@@ -20,7 +21,7 @@ export function TestimonialsSection() {
             className="w-full lg:w-5/12 aspect-[4/5] relative"
           >
             <img 
-              src="/assets/testimonial-bathroom.jpg" 
+              src={assetPath("assets/testimonial-bathroom.jpg")} 
               alt="Finished bathroom tiling" 
               className="w-full h-full object-cover shadow-2xl"
             />

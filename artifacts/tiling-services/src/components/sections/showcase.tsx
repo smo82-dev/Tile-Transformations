@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { assetPath } from "@/lib/asset-path";
 
 export function ShowcaseSection() {
   return (
@@ -21,7 +22,7 @@ export function ShowcaseSection() {
             className="aspect-[3/4] overflow-hidden group"
           >
             <img 
-              src="/assets/extra-white-bathroom.png" 
+              src={assetPath("assets/extra-white-bathroom.png")} 
               alt="Crisp white tiled bathroom" 
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
@@ -34,7 +35,7 @@ export function ShowcaseSection() {
             className="aspect-[3/4] overflow-hidden group mt-12 md:mt-24"
           >
             <img 
-              src="/assets/extra-black-bathroom.png" 
+              src={assetPath("assets/extra-black-bathroom.png")} 
               alt="Dramatic black tile feature wall" 
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />

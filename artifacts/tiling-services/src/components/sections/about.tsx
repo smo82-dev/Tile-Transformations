@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { assetPath } from "@/lib/asset-path";
 
 export function AboutSection() {
   return (
@@ -16,7 +17,7 @@ export function AboutSection() {
             <div className="relative w-48 md:w-56">
               <div className="aspect-[3/4] overflow-hidden">
                 <img 
-                  src="/assets/owner.jpg" 
+                  src={assetPath("assets/owner.jpg")} 
                   alt="Josh van Baarle, Owner-Operator" 
                   className="w-full h-full object-cover"
                 />

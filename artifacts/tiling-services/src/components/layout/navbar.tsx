@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { assetPath } from "@/lib/asset-path";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,7 +34,7 @@ export function Navbar() {
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 group z-50">
             <img 
-              src="/assets/logo-icon.png" 
+              src={assetPath("assets/logo-icon.png")} 
               alt="Logo" 
               className="w-8 h-8 object-contain transition-transform group-hover:scale-110" 
             />

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { BeforeAfterSlider } from "@/components/ui/before-after-slider";
+import { assetPath } from "@/lib/asset-path";
 
 export function BeforeAfterSection() {
   return (
@@ -42,8 +43,8 @@ export function BeforeAfterSection() {
           className="max-w-6xl mx-auto"
         >
           <BeforeAfterSlider 
-            beforeImage="/assets/before-bathroom.png"
-            afterImage="/assets/after-bathroom.png"
+            beforeImage={assetPath("assets/before-bathroom.png")}
+            afterImage={assetPath("assets/after-bathroom.png")}
           />
         </motion.div>
       </div>

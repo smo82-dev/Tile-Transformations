@@ -1,0 +1,10 @@
+{
+  "buildCommand": "pnpm --filter @workspace/tiling-services run build",
+  "outputDirectory": "artifacts/tiling-services/dist/public",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

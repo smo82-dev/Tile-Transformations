@@ -1,3 +1,5 @@
+import { assetPath } from "@/lib/asset-path";
+
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -7,7 +9,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           
           <div className="flex items-center gap-4">
-            <img src="/assets/logo-icon.png" alt="Logo" className="w-8 h-8 opacity-50 grayscale invert" />
+            <img src={assetPath("assets/logo-icon.png")} alt="Logo" className="w-8 h-8 opacity-50 grayscale invert" />
             <div>
               <p className="font-serif text-xl">Tiling Services Ltd</p>
               <p className="text-background/50 text-sm font-light italic">"Here to Serve"</p>

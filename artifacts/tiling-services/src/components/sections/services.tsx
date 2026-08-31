@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Home, Building2, Wrench } from "lucide-react";
+import { assetPath } from "@/lib/asset-path";
 
 const services = [
   {
@@ -13,7 +14,7 @@ const services = [
       "Underfloor heating",
       "Floor levelling compound"
     ],
-    image: "/assets/residential.jpg"
+    image: assetPath("assets/residential.jpg")
   },
   {
     icon: Building2,
@@ -26,7 +27,7 @@ const services = [
       "Underfloor heating",
       "Floor levelling compound"
     ],
-    image: "/assets/commercial.jpg"
+    image: assetPath("assets/commercial.jpg")
   },
   {
     icon: Wrench,
@@ -39,7 +40,7 @@ const services = [
       "Maintenance products",
       "Expert advice"
     ],
-    image: "/assets/extra-white-bathroom.png"
+    image: assetPath("assets/extra-white-bathroom.png")
   }
 ];
 
@@ -73,7 +74,7 @@ export function ServicesSection() {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <img src="/assets/logo-icon.png" alt="Logo Motif" className="w-16 h-16 opacity-20" />
+            <img src={assetPath("assets/logo-icon.png")} alt="Logo Motif" className="w-16 h-16 opacity-20" />
           </motion.div>
         </div>
 
