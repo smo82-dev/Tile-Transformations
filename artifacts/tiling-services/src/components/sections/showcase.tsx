@@ -11,12 +11,12 @@ export function ShowcaseSection() {
   const media: GalleryMedia[] = [
     {
       type: "image",
-      src: assetPath("assets/gallery-karaka.png"),
+      src: assetPath("assets/gallery-karaka-enhanced.webp"),
       alt: "Finished bathroom with patterned feature wall tiling",
     },
     {
       type: "image",
-      src: assetPath("assets/gallery-bathroom.png"),
+      src: assetPath("assets/gallery-bathroom-enhanced.webp"),
       alt: "Finished bathroom with detailed wall and floor tiling",
     },
     {
@@ -88,7 +88,7 @@ export function ShowcaseSection() {
                   alt={item.alt}
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-contain filter grayscale-[15%] contrast-[1.1] transition-transform duration-1000 group-hover:scale-105 group-hover:grayscale-0"
+                  className="w-full h-full object-cover object-center filter saturate-[1.08] contrast-[1.08] transition-transform duration-1000 group-hover:scale-105"
                 />
               )}
             </motion.div>
