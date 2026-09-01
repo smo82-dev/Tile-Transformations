@@ -1,11 +1,33 @@
 import { motion } from "framer-motion";
 import { assetPath } from "@/lib/asset-path";
 
+type GalleryMedia = {
+  type: "image" | "video";
+  src: string;
+  alt: string;
+  span: string;
+};
+
 export function ShowcaseSection() {
-  const images = [
-    { src: assetPath("assets/extra-white-bathroom.png"), alt: "Crisp white tiled bathroom", span: "md:col-span-2 md:row-span-2" },
-    { src: assetPath("assets/extra-black-bathroom.png"), alt: "Dark moody tiled shower", span: "md:col-span-1 md:row-span-1" },
-    { src: assetPath("assets/commercial.jpg"), alt: "Commercial tiling", span: "md:col-span-1 md:row-span-1" },
+  const media: GalleryMedia[] = [
+    {
+      type: "image",
+      src: assetPath("assets/gallery-bathroom.png"),
+      alt: "Finished bathroom with detailed wall and floor tiling",
+      span: "md:col-span-2 md:row-span-2",
+    },
+    {
+      type: "image",
+      src: assetPath("assets/gallery-karaka.png"),
+      alt: "Finished bathroom with patterned feature wall tiling",
+      span: "md:col-span-1 md:row-span-1",
+    },
+    {
+      type: "video",
+      src: assetPath("assets/gallery-project.mp4"),
+      alt: "Tiling project walkthrough",
+      span: "md:col-span-1 md:row-span-1",
+    },
   ];
 
   return (
@@ -38,23 +60,36 @@ export function ShowcaseSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-1 md:gap-4 max-w-6xl mx-auto">
-          {images.map((img, i) => (
+          {media.map((item, i) => (
             <motion.div
-              key={i}
+              key={item.src}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15, duration: 0.8 }}
-              className={`group relative overflow-hidden bg-background aspect-square md:aspect-auto ${img.span}`}
+              className={`group relative overflow-hidden bg-background aspect-square md:aspect-auto ${item.span}`}
             >
               <div className="absolute inset-0 bg-black/20 z-10 group-hover:bg-transparent transition-colors duration-700" />
-              <img
-                src={img.src}
-                alt={img.alt}
-                loading="lazy"
-                decoding="async"
-                className="w-full h-full object-cover filter grayscale-[15%] contrast-[1.1] transition-transform duration-1000 group-hover:scale-105 group-hover:grayscale-0"
-              />
+              {item.type === "video" ? (
+                <video
+                  src={item.src}
+                  aria-label={item.alt}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  className="w-full h-full object-cover filter grayscale-[15%] contrast-[1.1] transition-transform duration-1000 group-hover:scale-105 group-hover:grayscale-0"
+                />
+              ) : (
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover filter grayscale-[15%] contrast-[1.1] transition-transform duration-1000 group-hover:scale-105 group-hover:grayscale-0"
+                />
+              )}
             </motion.div>
           ))}
         </div>
