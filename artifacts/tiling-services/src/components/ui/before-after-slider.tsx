@@ -4,9 +4,16 @@ import { MoveHorizontal } from "lucide-react";
 interface BeforeAfterSliderProps {
   beforeImage: string;
   afterImage: string;
+  beforeAlt?: string;
+  afterAlt?: string;
 }
 
-export function BeforeAfterSlider({ beforeImage, afterImage }: BeforeAfterSliderProps) {
+export function BeforeAfterSlider({
+  beforeImage,
+  afterImage,
+  beforeAlt = "Before transformation",
+  afterAlt = "After transformation",
+}: BeforeAfterSliderProps) {
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -68,7 +75,7 @@ export function BeforeAfterSlider({ beforeImage, afterImage }: BeforeAfterSlider
       <div className="absolute inset-0 w-full h-full bg-secondary">
         <img 
           src={afterImage} 
-          alt="After transformation"
+          alt={afterAlt}
           loading="lazy"
           decoding="async"
           className="w-full h-full object-cover pointer-events-none" 
@@ -84,7 +91,7 @@ export function BeforeAfterSlider({ beforeImage, afterImage }: BeforeAfterSlider
       >
         <img 
           src={beforeImage} 
-          alt="Before transformation"
+          alt={beforeAlt}
           loading="lazy"
           decoding="async"
           className="w-full h-full object-cover pointer-events-none filter grayscale-[30%]"

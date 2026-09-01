@@ -40,22 +40,49 @@ export function BeforeAfterSection() {
           </motion.p>
         </div>
 
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full relative"
-        >
-          {/* Decorative frame elements */}
-          <div className="absolute -top-4 -left-4 w-8 h-8 border-t border-l border-white/20" />
-          <div className="absolute -bottom-4 -right-4 w-8 h-8 border-b border-r border-white/20" />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            className="w-full relative"
+          >
+            <div className="absolute -top-4 -left-4 w-8 h-8 border-t border-l border-white/20" />
+            <div className="absolute -bottom-4 -right-4 w-8 h-8 border-b border-r border-white/20" />
 
-          <BeforeAfterSlider 
-            beforeImage={assetPath("assets/fireplace-before.png")}
-            afterImage={assetPath("assets/fireplace-after.png")}
-          />
-        </motion.div>
+            <BeforeAfterSlider
+              beforeImage={assetPath("assets/fireplace-before.png")}
+              afterImage={assetPath("assets/fireplace-after.png")}
+              beforeAlt="Before: worn and damaged tiled fireplace hearth"
+              afterAlt="After: neatly tiled fireplace hearth"
+            />
+            <p className="mt-4 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+              Fireplace Hearth
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4, duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            className="w-full relative"
+          >
+            <div className="absolute -top-4 -left-4 w-8 h-8 border-t border-l border-white/20" />
+            <div className="absolute -bottom-4 -right-4 w-8 h-8 border-b border-r border-white/20" />
+
+            <BeforeAfterSlider
+              beforeImage={assetPath("assets/conservatory-before.png")}
+              afterImage={assetPath("assets/conservatory-after.png")}
+              beforeAlt="Before: unfinished conservatory floor ready for tiling"
+              afterAlt="After: patterned black and white tiled conservatory floor"
+            />
+            <p className="mt-4 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+              Conservatory Floor
+            </p>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
