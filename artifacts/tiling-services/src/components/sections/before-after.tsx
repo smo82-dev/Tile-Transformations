@@ -52,8 +52,8 @@ export function BeforeAfterSection() {
           <div className="absolute -bottom-4 -right-4 w-8 h-8 border-b border-r border-white/20" />
 
           <BeforeAfterSlider 
-            beforeImage={assetPath("assets/before-bathroom.png")}
-            afterImage={assetPath("assets/after-bathroom.png")}
+            beforeImage={assetPath("assets/fireplace-before.png")}
+            afterImage={assetPath("assets/fireplace-after.png")}
           />
         </motion.div>
       </div>

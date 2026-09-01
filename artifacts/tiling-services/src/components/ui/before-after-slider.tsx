@@ -48,7 +48,7 @@ export function BeforeAfterSlider({ beforeImage, afterImage }: BeforeAfterSlider
   return (
     <div
       ref={containerRef}
-      className="relative w-full aspect-[4/3] md:aspect-[21/9] overflow-hidden rounded-none shadow-[0_20px_50px_rgba(0,0,0,0.5)] cursor-ew-resize select-none border border-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+      className="relative w-full aspect-[3/2] overflow-hidden rounded-none shadow-[0_20px_50px_rgba(0,0,0,0.5)] cursor-ew-resize select-none border border-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
       onMouseDown={(e) => handlePointerDown(e.clientX)}
       onMouseMove={handleMouseMove}
       onMouseUp={handlePointerUp}
@@ -73,7 +73,7 @@ export function BeforeAfterSlider({ beforeImage, afterImage }: BeforeAfterSlider
           decoding="async"
           className="w-full h-full object-cover pointer-events-none" 
         />
-        <div className="absolute top-6 right-6 bg-black/80 backdrop-blur-sm border border-white/10 text-white px-5 py-2 text-xs font-bold uppercase tracking-[0.2em]">
+          <div className="absolute top-6 right-6 bg-primary/95 backdrop-blur-sm border border-primary text-primary-foreground px-5 py-2 text-xs font-bold uppercase tracking-[0.2em]">
           After
         </div>
       </div>
@@ -89,7 +89,7 @@ export function BeforeAfterSlider({ beforeImage, afterImage }: BeforeAfterSlider
           decoding="async"
           className="w-full h-full object-cover pointer-events-none filter grayscale-[30%]"
         />
-        <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-sm border border-black/10 text-black px-5 py-2 text-xs font-bold uppercase tracking-[0.2em]">
+        <div className="absolute top-6 left-6 bg-background/90 backdrop-blur-sm border border-primary/40 text-foreground px-5 py-2 text-xs font-bold uppercase tracking-[0.2em]">
           Before
         </div>
       </div>
