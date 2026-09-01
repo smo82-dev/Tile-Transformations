@@ -12,14 +12,14 @@ export function ShowcaseSection() {
   const media: GalleryMedia[] = [
     {
       type: "image",
-      src: assetPath("assets/gallery-bathroom.png"),
-      alt: "Finished bathroom with detailed wall and floor tiling",
+      src: assetPath("assets/gallery-karaka.png"),
+      alt: "Finished bathroom with patterned feature wall tiling",
       span: "md:col-span-2 md:row-span-2",
     },
     {
       type: "image",
-      src: assetPath("assets/gallery-karaka.png"),
-      alt: "Finished bathroom with patterned feature wall tiling",
+      src: assetPath("assets/gallery-bathroom.png"),
+      alt: "Finished bathroom with detailed wall and floor tiling",
       span: "md:col-span-1 md:row-span-1",
     },
     {
