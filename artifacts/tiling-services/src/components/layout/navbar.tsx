@@ -32,22 +32,22 @@ export function Navbar() {
             : "bg-transparent py-8"
         }`}
       >
-        <div className="container mx-auto px-6 flex items-center justify-between">
+        <div className="w-full max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-10 xl:px-12 flex items-center justify-between gap-6">
           
           {/* Logo */}
-          <a href="#" className="flex items-center gap-4 group z-50">
+          <a href="#" className="flex shrink-0 items-center gap-3 lg:gap-4 group z-50">
             <img 
               src={assetPath("assets/logo-icon.png")} 
               alt="Logo" 
-              className="w-9 h-9 object-contain transition-transform duration-500 group-hover:scale-110 brightness-0 invert"
+              className="w-8 h-8 lg:w-9 lg:h-9 object-contain transition-transform duration-500 group-hover:scale-110 brightness-0 invert"
             />
-            <span className="font-display font-bold text-foreground text-xl tracking-[0.2em] uppercase hidden sm:block">
+            <span className="font-display font-bold text-foreground text-base lg:text-xl tracking-[0.16em] lg:tracking-[0.2em] uppercase hidden sm:block whitespace-nowrap">
               Tiling Services
             </span>
           </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-10">
+          <nav className="hidden lg:flex items-center gap-5 xl:gap-10">
             {navLinks.map((link) => (
               <a 
                 key={link.name} 
@@ -57,17 +57,17 @@ export function Navbar() {
                 {link.name}
               </a>
             ))}
-            <a 
+            <a
               href="#contact"
-              className="ml-4 px-7 py-3 bg-white text-black text-xs font-bold uppercase tracking-[0.15em] hover:bg-primary hover:text-primary-foreground transition-colors duration-500"
+              className="ml-1 xl:ml-4 px-5 xl:px-7 py-3 bg-white text-black text-xs font-bold uppercase tracking-[0.15em] hover:bg-primary hover:text-primary-foreground transition-colors duration-500 whitespace-nowrap"
             >
               Get a Quote
             </a>
           </nav>
 
           {/* Mobile Toggle */}
-          <button 
-            className="md:hidden text-foreground z-50 hover:text-primary transition-colors"
+          <button
+            className="lg:hidden shrink-0 text-foreground z-50 hover:text-primary transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle Menu"
           >
