@@ -13,25 +13,25 @@ type Review = {
 
 const reviews: Review[] = [
   {
-    name: "Matthew Davis",
-    text: "Josh did a great job of our tiling. Very happy with the results. Josh paid attention to detail and left everything tidy and offered additional services that were helpful. He also explained the job in an easy to understand way.",
-    highlight: "attention to detail",
-    image: assetPath("assets/extra-white-bathroom.png"),
-    imageAlt: "Bright finished bathroom tiling",
+    name: "Tessa Haigh",
+    text: "Josh did a fabulous job tiling our family bathroom and ensuite. He was thorough, detail-focused, reliable, and easy to communicate with. Happy to recommend.",
+    highlight: "thorough, detail-focused, reliable",
+    image: assetPath("assets/tessa-bathroom.webp"),
+    imageAlt: "Bright tiled bathroom with vanity and mirror",
   },
   {
-    name: "Sunil Gaur",
-    text: "Josh did a great job on a small tiling project for us. He was reliable, professional, and paid attention to detail throughout the job. The work was completed to a high standard, and the finished result looks excellent. We'd be happy to recommend Josh and would definitely use him again for future tiling work.",
-    highlight: "reliable, professional",
-    image: assetPath("assets/extra-black-bathroom.png"),
-    imageAlt: "Dark feature tiled shower",
+    name: "David Green",
+    text: "Josh did a great job tiling our kitchen and laundry. He was easy to have in the house, cleaned up daily, and delivered quality work. More than happy to recommend.",
+    highlight: "quality work",
+    image: assetPath("assets/david-kitchen-laundry.webp"),
+    imageAlt: "Finished tiled kitchen backsplash with open shelving",
   },
   {
-    name: "Stephanie Reid",
-    text: "We are thankful for Josh at Tiling Services who came to offer advice and completed a small job for us. Josh was honest, reliable, professional and we were beyond happy with the end …",
-    highlight: "honest, reliable, professional",
-    image: assetPath("assets/testimonial-bathroom.jpg"),
-    imageAlt: "Finished bathroom with precise floor and wall tiling",
+    name: "Betty Beswick",
+    text: "Josh was the right person for our back wall and hearth project. He discussed the tile detailing with us, and other tradespeople commented on the quality of his tiling. Great work, highly recommend.",
+    highlight: "quality of his tiling",
+    image: assetPath("assets/betty-fireplace-hearth.webp"),
+    imageAlt: "Stone tiled feature wall and hearth around a wood burner",
   },
 ];
 
