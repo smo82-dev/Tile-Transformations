@@ -67,7 +67,7 @@ export function AboutSection() {
             <div className="relative w-full max-w-sm">
               <div className="aspect-[3/4] overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
                 <img
-                  src={assetPath("assets/owner.jpg")}
+                  src={assetPath("assets/owner-portrait.png")}
                   alt="Josh van Baarle, Owner-Operator"
                   loading="lazy"
                   decoding="async"
