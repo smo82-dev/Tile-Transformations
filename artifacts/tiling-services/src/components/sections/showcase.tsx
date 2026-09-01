@@ -21,8 +21,13 @@ export function ShowcaseSection() {
     },
     {
       type: "video",
-      src: assetPath("assets/gallery-project.mp4"),
-      alt: "Tiling project walkthrough",
+      src: assetPath("assets/gallery-conservatory-floor.mp4"),
+      alt: "Conservatory floor tiling project",
+    },
+    {
+      type: "video",
+      src: assetPath("assets/gallery-mosaic-timelapse.mp4"),
+      alt: "Mosaic tiling installation timelapse",
     },
   ];
 
@@ -55,7 +60,7 @@ export function ShowcaseSection() {
           </motion.h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-6xl mx-auto">
           {media.map((item, i) => (
             <motion.div
               key={item.src}
@@ -63,7 +68,7 @@ export function ShowcaseSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15, duration: 0.8 }}
-              className="group relative overflow-hidden bg-background aspect-[4/3]"
+              className="group relative overflow-hidden bg-background aspect-video"
             >
               <div className="absolute inset-0 bg-black/20 z-10 group-hover:bg-transparent transition-colors duration-700" />
               {item.type === "video" ? (

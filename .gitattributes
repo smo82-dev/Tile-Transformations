@@ -1,2 +1,6 @@
 artifacts/tiling-services/public/assets/gallery-project.mp4 filter=lfs diff=lfs merge=lfs -text
 attached_assets/VID_20250112_124901_1788255005020.mp4 filter=lfs diff=lfs merge=lfs -text
+artifacts/tiling-services/public/assets/gallery-conservatory-floor.mp4 filter=lfs diff=lfs merge=lfs -text
+artifacts/tiling-services/public/assets/gallery-mosaic-timelapse.mp4 filter=lfs diff=lfs merge=lfs -text
+attached_assets/Conservatory_floor_1788259451077.mp4 filter=lfs diff=lfs merge=lfs -text
+attached_assets/Mosaic_Timelapse_1788259463234.mp4 filter=lfs diff=lfs merge=lfs -text
