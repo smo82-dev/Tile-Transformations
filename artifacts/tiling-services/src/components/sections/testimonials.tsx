@@ -149,42 +149,44 @@ export function TestimonialsSection() {
           onTouchEnd={handleTouchEnd}
           className="outline-none focus-visible:ring-2 focus-visible:ring-primary/70 focus-visible:ring-offset-8 focus-visible:ring-offset-background"
         >
-          <div className="flex flex-col lg:flex-row gap-12 items-center">
+          <div className="flex flex-col lg:flex-row gap-12 items-stretch">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              className="w-full lg:w-5/12 aspect-[4/5] lg:aspect-[4/3] relative"
+              className="w-full lg:w-5/12 relative lg:self-stretch"
             >
-              <div className="absolute inset-0 border border-white/10 z-10 pointer-events-none translate-x-4 translate-y-4" />
-              <div className="absolute inset-0 grid overflow-hidden">
-                {reviews.map((review, index) => (
-                  <motion.div
-                    key={review.name}
-                    initial={false}
-                    animate={{
-                      opacity: index === activeIndex ? 1 : 0,
-                      scale: index === activeIndex ? 1 : 1.04,
-                    }}
-                    transition={{ duration: prefersReducedMotion ? 0 : 0.7, ease: [0.16, 1, 0.3, 1] }}
-                    aria-hidden={index !== activeIndex}
-                    className="col-start-1 row-start-1 pointer-events-none"
-                  >
-                    <img
-                      src={review.image}
-                      alt={review.imageAlt}
-                      loading={index === 0 ? "lazy" : "eager"}
-                      decoding="async"
-                      className="w-full h-full object-cover filter grayscale-[20%] contrast-125"
-                    />
-                  </motion.div>
-                ))}
-              </div>
-              <div className="absolute bottom-6 left-6 z-20 flex items-center gap-3 text-xs font-bold tracking-[0.2em] text-white/70">
-                <span className="text-primary">{String(activeIndex + 1).padStart(2, "0")}</span>
-                <span className="w-8 h-px bg-white/30" />
-                <span>{String(reviews.length).padStart(2, "0")}</span>
+              <div className="relative w-full aspect-[4/5] lg:aspect-auto lg:h-full bg-black/20 overflow-hidden">
+                <div className="absolute inset-0 border border-white/10 z-10 pointer-events-none translate-x-4 translate-y-4" />
+                <div className="absolute inset-0 grid">
+                  {reviews.map((review, index) => (
+                    <motion.div
+                      key={review.name}
+                      initial={false}
+                      animate={{
+                        opacity: index === activeIndex ? 1 : 0,
+                        scale: index === activeIndex ? 1 : 1.04,
+                      }}
+                      transition={{ duration: prefersReducedMotion ? 0 : 0.7, ease: [0.16, 1, 0.3, 1] }}
+                      aria-hidden={index !== activeIndex}
+                      className="col-start-1 row-start-1 pointer-events-none"
+                    >
+                      <img
+                        src={review.image}
+                        alt={review.imageAlt}
+                        loading={index === 0 ? "lazy" : "eager"}
+                        decoding="async"
+                        className="w-full h-full object-contain filter grayscale-[20%] contrast-125"
+                      />
+                    </motion.div>
+                  ))}
+                </div>
+                <div className="absolute bottom-6 left-6 z-20 flex items-center gap-3 text-xs font-bold tracking-[0.2em] text-white/70">
+                  <span className="text-primary">{String(activeIndex + 1).padStart(2, "0")}</span>
+                  <span className="w-8 h-px bg-white/30" />
+                  <span>{String(reviews.length).padStart(2, "0")}</span>
+                </div>
               </div>
             </motion.div>
 
