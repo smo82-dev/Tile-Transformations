@@ -13,21 +13,21 @@ type Review = {
 
 const reviews: Review[] = [
   {
-    name: "Tessa Haigh",
+    name: "Tessa",
     text: "Josh did a fabulous job tiling our family bathroom and ensuite. He was thorough, detail-focused, reliable, and easy to communicate with. Happy to recommend.",
     highlight: "thorough, detail-focused, reliable",
     image: assetPath("assets/tessa-bathroom.webp"),
     imageAlt: "Bright tiled bathroom with vanity and mirror",
   },
   {
-    name: "David Green",
+    name: "David",
     text: "Josh did a great job tiling our kitchen and laundry. He was easy to have in the house, cleaned up daily, and delivered quality work. More than happy to recommend.",
     highlight: "quality work",
     image: assetPath("assets/david-kitchen-laundry.webp"),
     imageAlt: "Finished tiled kitchen backsplash with open shelving",
   },
   {
-    name: "Betty Beswick",
+    name: "Betty",
     text: "Josh was the right person for our back wall and hearth project. He discussed the tile detailing with us, and other tradespeople commented on the quality of his tiling. Great work, highly recommend.",
     highlight: "quality of his tiling",
     image: assetPath("assets/betty-fireplace-hearth.webp"),
@@ -128,7 +128,7 @@ export function TestimonialsSection() {
   };
 
   return (
-    <section id="testimonials" className="py-32 bg-background border-t border-white/5 relative overflow-hidden">
+    <section id="testimonials" className="py-24 md:py-28 bg-background border-t border-white/5 relative overflow-hidden">
       <div className="container mx-auto px-6">
         <div
           role="region"
@@ -149,13 +149,13 @@ export function TestimonialsSection() {
           onTouchEnd={handleTouchEnd}
           className="outline-none focus-visible:ring-2 focus-visible:ring-primary/70 focus-visible:ring-offset-8 focus-visible:ring-offset-background"
         >
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
+          <div className="flex flex-col lg:flex-row gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              className="w-full lg:w-5/12 aspect-[4/5] relative"
+              className="w-full lg:w-5/12 aspect-[4/5] lg:aspect-[4/3] relative"
             >
               <div className="absolute inset-0 border border-white/10 z-10 pointer-events-none translate-x-4 translate-y-4" />
               <div className="absolute inset-0 grid overflow-hidden">
@@ -197,14 +197,14 @@ export function TestimonialsSection() {
             >
               <Quote className="absolute -top-12 -left-2 w-32 h-32 text-white/[0.03] -z-10 rotate-180" />
 
-              <div className="flex items-center gap-4 mb-10">
+              <div className="flex items-center gap-4 mb-8">
                 <div className="w-8 h-[1px] bg-primary" />
                 <span className="text-primary font-bold tracking-[0.2em] uppercase text-xs">
                   Client Experience
                 </span>
               </div>
 
-              <div className="grid min-h-[27rem] md:min-h-[30rem]">
+              <div className="grid min-h-[22rem] md:min-h-[25rem]">
                 {reviews.map((review, index) => (
                   <motion.div
                     key={review.name}
@@ -219,7 +219,7 @@ export function TestimonialsSection() {
                       index === activeIndex ? "pointer-events-auto" : "pointer-events-none"
                     }`}
                   >
-                    <blockquote className="text-2xl md:text-4xl lg:text-5xl font-display text-foreground leading-[1.2] mb-12 uppercase tracking-tight">
+                    <blockquote className="text-xl md:text-3xl lg:text-4xl font-display text-foreground leading-[1.2] mb-8 uppercase tracking-tight">
                       “<ReviewQuote review={review} />”
                     </blockquote>
 
@@ -241,7 +241,7 @@ export function TestimonialsSection() {
                 ))}
               </div>
 
-              <div className="mt-10 flex items-center justify-between gap-6 border-t border-white/10 pt-6">
+              <div className="mt-8 flex items-center justify-between gap-6 border-t border-white/10 pt-5">
                 <div className="flex items-center gap-2" aria-label="Choose a testimonial">
                   {reviews.map((review, index) => (
                     <button
