@@ -5,7 +5,6 @@ type GalleryMedia = {
   type: "image" | "video";
   src: string;
   alt: string;
-  span: string;
 };
 
 export function ShowcaseSection() {
@@ -14,27 +13,24 @@ export function ShowcaseSection() {
       type: "image",
       src: assetPath("assets/gallery-karaka.png"),
       alt: "Finished bathroom with patterned feature wall tiling",
-      span: "md:col-span-2 md:row-span-2",
     },
     {
       type: "image",
       src: assetPath("assets/gallery-bathroom.png"),
       alt: "Finished bathroom with detailed wall and floor tiling",
-      span: "md:col-span-1 md:row-span-1",
     },
     {
       type: "video",
       src: assetPath("assets/gallery-project.mp4"),
       alt: "Tiling project walkthrough",
-      span: "md:col-span-1 md:row-span-1",
     },
   ];
 
   return (
-    <section id="showcase" className="bg-secondary py-32 border-t border-white/5">
+    <section id="showcase" className="bg-secondary py-20 md:py-24 border-t border-white/5">
       <div className="container mx-auto px-6">
 
-        <div className="flex flex-col items-center text-center mb-20">
+        <div className="flex flex-col items-center text-center mb-12 md:mb-14">
           <motion.div 
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -52,14 +48,14 @@ export function ShowcaseSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-6xl font-display uppercase tracking-tight text-foreground"
+            className="text-3xl md:text-5xl font-display uppercase tracking-tight text-foreground"
           >
             The standard <br className="md:hidden" />
             <span className="text-white/40">of finish.</span>
           </motion.h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-1 md:gap-4 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
           {media.map((item, i) => (
             <motion.div
               key={item.src}
@@ -67,7 +63,7 @@ export function ShowcaseSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15, duration: 0.8 }}
-              className={`group relative overflow-hidden bg-background aspect-square md:aspect-auto ${item.span}`}
+              className="group relative overflow-hidden bg-background aspect-[4/3]"
             >
               <div className="absolute inset-0 bg-black/20 z-10 group-hover:bg-transparent transition-colors duration-700" />
               {item.type === "video" ? (
@@ -79,7 +75,7 @@ export function ShowcaseSection() {
                   loop
                   playsInline
                   preload="metadata"
-                  className="w-full h-full object-cover filter grayscale-[15%] contrast-[1.1] transition-transform duration-1000 group-hover:scale-105 group-hover:grayscale-0"
+                  className="w-full h-full object-contain filter grayscale-[15%] contrast-[1.1] transition-transform duration-1000 group-hover:scale-105 group-hover:grayscale-0"
                 />
               ) : (
                 <img
@@ -87,7 +83,7 @@ export function ShowcaseSection() {
                   alt={item.alt}
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover filter grayscale-[15%] contrast-[1.1] transition-transform duration-1000 group-hover:scale-105 group-hover:grayscale-0"
+                  className="w-full h-full object-contain filter grayscale-[15%] contrast-[1.1] transition-transform duration-1000 group-hover:scale-105 group-hover:grayscale-0"
                 />
               )}
             </motion.div>
