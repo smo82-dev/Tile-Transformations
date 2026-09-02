@@ -23,7 +23,6 @@ export function Hero() {
         <video
           ref={videoRef}
           src={assetPath("assets/hero-tiling.mp4")}
-          poster={assetPath("assets/after-bathroom.png")}
           autoPlay
           muted
           loop
