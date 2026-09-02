@@ -20,7 +20,7 @@ function LaunchSplash() {
         <motion.div
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
-          transition={{ duration: 1, ease: "easeInOut" }}
+          transition={{ duration: 2, ease: "easeInOut" }}
           onAnimationComplete={() => setIsVisible(false)}
           aria-hidden="true"
           className="fixed inset-0 z-[100] flex items-center justify-center bg-[#171717]"
@@ -28,7 +28,7 @@ function LaunchSplash() {
           <img
             src={assetPath("assets/logo-icon.png")}
             alt=""
-            className="h-20 w-20 object-contain brightness-0 invert sm:h-24 sm:w-24"
+            className="h-[60vw] w-[60vw] max-h-[60vh] max-w-[60vh] object-contain brightness-0 invert"
           />
         </motion.div>
       )}
