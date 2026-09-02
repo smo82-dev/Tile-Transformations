@@ -65,7 +65,7 @@ export function ContactSection() {
                   <Mail className="w-6 h-6" strokeWidth={1.5} />
                 </div>
                 <h4 className="font-display font-bold text-foreground uppercase tracking-[0.15em] text-sm">Email Us</h4>
-                <a href="mailto:joshvanbaarle@gmail.com" className="block text-xl text-muted-foreground hover:text-white transition-colors font-light break-words">josh@tilingservices.co.nz</a>
+                <a href="mailto:josh@tilingservices.co.nz" className="block text-xl text-muted-foreground hover:text-white transition-colors font-light break-words">josh@tilingservices.co.nz</a>
               </div>
 
               <div className="space-y-4">

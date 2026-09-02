@@ -34,7 +34,7 @@ export function Footer() {
               <h4 className="font-display font-bold uppercase tracking-[0.15em] text-xs text-white/50 mb-6">Contact</h4>
               <div className="flex flex-col gap-4 text-sm font-light text-white/80">
                 <a href="tel:0272871227" className="hover:text-primary transition-colors">027-287-1227</a>
-                <a href="mailto:joshvanbaarle@gmail.com" className="hover:text-primary transition-colors">josh@tilingservices.co.nz</a>
+                <a href="mailto:josh@tilingservices.co.nz" className="hover:text-primary transition-colors">josh@tilingservices.co.nz</a>
                 <span className="text-white/40">Tauranga, NZ</span>
               </div>
             </div>
