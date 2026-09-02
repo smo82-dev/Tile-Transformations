@@ -113,7 +113,7 @@ input[type="range"]::-moz-range-thumb {
 
 
 /* Defer rendering work for content below the initial viewport without changing layout or content. */
-main > section:not(#hero) {
+main > section:not(#hero):not(#contact) {
   content-visibility: auto;
   contain-intrinsic-size: 900px;
 }
