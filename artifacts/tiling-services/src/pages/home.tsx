@@ -20,7 +20,7 @@ function LaunchSplash() {
         <motion.div
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
-          transition={{ duration: 2, ease: "easeInOut" }}
+          transition={{ duration: 3, ease: "easeInOut" }}
           onAnimationComplete={() => setIsVisible(false)}
           aria-hidden="true"
           className="fixed inset-0 z-[100] flex items-center justify-center bg-[#171717]"
