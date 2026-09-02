@@ -1,3 +1,5 @@
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { Hero } from "@/components/sections/hero";
@@ -7,10 +9,37 @@ import { AboutSection } from "@/components/sections/about";
 import { TestimonialsSection } from "@/components/sections/testimonials";
 import { ShowcaseSection } from "@/components/sections/showcase";
 import { ContactSection } from "@/components/sections/contact";
+import { assetPath } from "@/lib/asset-path";
+
+function LaunchSplash() {
+  const [isVisible, setIsVisible] = useState(true);
+
+  return (
+    <AnimatePresence>
+      {isVisible && (
+        <motion.div
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 0 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+          onAnimationComplete={() => setIsVisible(false)}
+          aria-hidden="true"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-[#171717]"
+        >
+          <img
+            src={assetPath("assets/logo-icon.png")}
+            alt=""
+            className="h-20 w-20 object-contain brightness-0 invert sm:h-24 sm:w-24"
+          />
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+}
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground selection:bg-primary/20 selection:text-primary">
+      <LaunchSplash />
       <Navbar />
       <main className="flex-1">
         <Hero />
