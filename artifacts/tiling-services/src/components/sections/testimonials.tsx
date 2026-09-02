@@ -9,6 +9,7 @@ type Review = {
   highlight: string;
   image: string;
   imageAlt: string;
+  imageClassName?: string;
 };
 
 const reviews: Review[] = [
@@ -25,6 +26,7 @@ const reviews: Review[] = [
     highlight: "quality work",
     image: assetPath("assets/david-kitchen-laundry.webp"),
     imageAlt: "Finished tiled kitchen backsplash with open shelving",
+    imageClassName: "object-[center_30%]",
   },
   {
     name: "Betty",
@@ -177,7 +179,7 @@ export function TestimonialsSection() {
                         alt={review.imageAlt}
                         loading={index === 0 ? "lazy" : "eager"}
                         decoding="async"
-                        className="w-full h-full object-contain filter grayscale-[20%] contrast-125"
+                        className={`w-full h-full object-contain filter grayscale-[20%] contrast-125 ${review.imageClassName ?? "object-center"}`}
                       />
                     </motion.div>
                   ))}
