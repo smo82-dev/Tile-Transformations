@@ -219,7 +219,7 @@ export function TestimonialsSection() {
                     }}
                     transition={{ duration: prefersReducedMotion ? 0 : 0.5, ease: [0.16, 1, 0.3, 1] }}
                     aria-hidden={index !== activeIndex}
-                    className={`col-start-1 row-start-1 flex flex-col items-start ${
+                    className={`col-start-1 row-start-1 flex flex-col items-start justify-center ${
                       index === activeIndex ? "pointer-events-auto" : "pointer-events-none"
                     }`}
                   >
@@ -227,7 +227,7 @@ export function TestimonialsSection() {
                       “<ReviewQuote review={review} />”
                     </blockquote>
 
-                    <div className="flex items-center gap-6 mt-auto">
+                    <div className="flex items-center gap-6">
                       <div className="w-12 h-[2px] bg-white/20" />
                       <div>
                         <p className="font-display font-bold text-foreground tracking-[0.15em]">{review.name}</p>
