@@ -155,7 +155,7 @@ export function TestimonialsSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              className="w-full max-w-[34rem] lg:w-5/12 relative"
+              className="w-full max-w-[34rem] lg:w-5/12 relative lg:self-stretch"
             >
               <div className="relative flex w-full items-center justify-center aspect-[4/5] lg:aspect-auto lg:h-full bg-black/20 overflow-hidden">
                 <div className="absolute inset-0 border border-white/10 z-10 pointer-events-none translate-x-4 translate-y-4" />
