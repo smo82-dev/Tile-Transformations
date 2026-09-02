@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-32 bg-background border-t border-white/5">
+    <section id="contact" className="scroll-mt-24 py-32 bg-background border-t border-white/5">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           

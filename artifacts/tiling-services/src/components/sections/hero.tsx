@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { assetPath } from "@/lib/asset-path";
+import { scrollToSection } from "@/lib/scroll-to-section";
 
 export function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -64,6 +65,10 @@ export function Hero() {
             >
               <a
                 href="#contact"
+                onClick={(event) => {
+                  event.preventDefault();
+                  scrollToSection("contact");
+                }}
                 className="px-10 py-5 bg-primary text-primary-foreground font-semibold tracking-widest uppercase hover:bg-white hover:text-black transition-all duration-500 w-full sm:w-auto text-center text-sm"
               >
                 Request a Quote

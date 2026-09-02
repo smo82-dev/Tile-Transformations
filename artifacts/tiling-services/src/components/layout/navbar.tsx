@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { assetPath } from "@/lib/asset-path";
+import { scrollToSection } from "@/lib/scroll-to-section";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -59,6 +60,10 @@ export function Navbar() {
             ))}
             <a
               href="#contact"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("contact");
+              }}
               className="ml-1 xl:ml-4 px-5 xl:px-7 py-3 bg-white text-black text-xs font-bold uppercase tracking-[0.15em] hover:bg-primary hover:text-primary-foreground transition-colors duration-500 whitespace-nowrap"
             >
               Get a Quote
@@ -102,7 +107,11 @@ export function Navbar() {
               ))}
               <motion.a
                 href="#contact"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(event) => {
+                  event.preventDefault();
+                  scrollToSection("contact");
+                  setMobileMenuOpen(false);
+                }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
