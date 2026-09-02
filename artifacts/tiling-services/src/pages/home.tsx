@@ -26,7 +26,7 @@ function LaunchSplash() {
           className="fixed inset-0 z-[100] flex items-center justify-center bg-[#171717]"
         >
           <img
-            src={assetPath("assets/logo-icon.png")}
+            src={assetPath("assets/logo-icon-splash.png")}
             alt=""
             className="h-[60vw] w-[60vw] max-h-[60vh] max-w-[60vh] object-contain brightness-0 invert"
           />
