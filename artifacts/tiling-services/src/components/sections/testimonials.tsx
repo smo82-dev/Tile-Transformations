@@ -149,15 +149,15 @@ export function TestimonialsSection() {
           onTouchEnd={handleTouchEnd}
           className="outline-none focus-visible:ring-2 focus-visible:ring-primary/70 focus-visible:ring-offset-8 focus-visible:ring-offset-background"
         >
-          <div className="flex flex-col lg:flex-row gap-12 items-stretch">
+          <div className="flex flex-col lg:flex-row gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              className="w-full lg:w-5/12 relative lg:self-stretch"
+              className="w-full max-w-[34rem] lg:w-5/12 relative"
             >
-              <div className="relative w-full aspect-[4/5] lg:aspect-auto lg:h-full bg-black/20 overflow-hidden">
+              <div className="relative flex w-full items-center justify-center aspect-[4/5] lg:aspect-auto lg:h-full bg-black/20 overflow-hidden">
                 <div className="absolute inset-0 border border-white/10 z-10 pointer-events-none translate-x-4 translate-y-4" />
                 <div className="absolute inset-0 grid">
                   {reviews.map((review, index) => (
@@ -195,11 +195,11 @@ export function TestimonialsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="w-full lg:w-7/12 relative lg:pl-12"
+              className="w-full lg:w-7/12 relative lg:pl-12 flex flex-col items-center text-center"
             >
-              <Quote className="absolute -top-12 -left-2 w-32 h-32 text-white/[0.03] -z-10 rotate-180" />
+              <Quote className="absolute -top-12 left-1/2 w-32 h-32 -translate-x-1/2 text-white/[0.03] -z-10 rotate-180" />
 
-              <div className="flex items-center gap-4 mb-8">
+              <div className="flex items-center justify-center gap-4 mb-8">
                 <div className="w-8 h-[1px] bg-primary" />
                 <span className="text-primary font-bold tracking-[0.2em] uppercase text-xs">
                   Client Experience
@@ -217,25 +217,25 @@ export function TestimonialsSection() {
                     }}
                     transition={{ duration: prefersReducedMotion ? 0 : 0.5, ease: [0.16, 1, 0.3, 1] }}
                     aria-hidden={index !== activeIndex}
-                    className={`col-start-1 row-start-1 flex flex-col items-start ${
+                    className={`col-start-1 row-start-1 flex flex-col items-center ${
                       index === activeIndex ? "pointer-events-auto" : "pointer-events-none"
                     }`}
                   >
-                    <blockquote className="text-xl md:text-3xl lg:text-4xl font-display text-foreground leading-[1.2] mb-8 uppercase tracking-tight">
+                    <blockquote className="max-w-2xl text-lg md:text-2xl lg:text-3xl font-display text-foreground leading-[1.3] mb-8 lowercase tracking-normal">
                       “<ReviewQuote review={review} />”
                     </blockquote>
 
-                    <div className="flex items-center gap-6 mt-auto">
+                    <div className="flex items-center justify-center gap-6 mt-auto">
                       <div className="w-12 h-[2px] bg-white/20" />
                       <div>
-                        <p className="font-display font-bold text-foreground uppercase tracking-[0.15em]">{review.name}</p>
+                        <p className="font-display font-bold text-foreground lowercase tracking-[0.15em]">{review.name}</p>
                         <div className="flex items-center gap-2 mt-2">
                           <div className="flex gap-0.5 text-primary" aria-label="5 star Google review">
                             {Array.from({ length: 5 }).map((_, starIndex) => (
                               <Star key={starIndex} className="w-3 h-3 fill-current" aria-hidden="true" />
                             ))}
                           </div>
-                          <p className="text-muted-foreground font-light text-xs tracking-widest uppercase">Google Review</p>
+                          <p className="text-muted-foreground font-light text-xs tracking-widest lowercase">Google Review</p>
                         </div>
                       </div>
                     </div>
