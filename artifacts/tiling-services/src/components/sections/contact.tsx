@@ -25,9 +25,9 @@ export function ContactSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="text-4xl md:text-6xl font-display uppercase tracking-tight text-foreground mb-6"
+                className="text-4xl md:text-6xl font-display uppercase tracking-tight text-white/40 mb-6"
               >
-                Ready for <span className="text-white/40">precision?</span>
+                Ready for <span className="text-white">precision?</span>
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
