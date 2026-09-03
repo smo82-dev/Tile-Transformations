@@ -54,6 +54,15 @@ export function BeforeAfterSection() {
         imageFit: "contain",
       },
     ],
+    [
+      {
+        title: "underfloor heating",
+        beforeImage: assetPath("assets/underfloor-heating-before.jpg"),
+        afterImage: assetPath("assets/underfloor-heating-after.png"),
+        beforeAlt: "Before: underfloor heating installed beneath the bathroom floor",
+        afterAlt: "After: completed tiled bathroom floor with underfloor heating",
+      },
+    ],
   ];
 
   return (
