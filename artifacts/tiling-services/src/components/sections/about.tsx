@@ -67,11 +67,11 @@ export function AboutSection() {
             <div className="relative w-full max-w-[18rem] sm:max-w-xs">
               <div className="aspect-[3/4] overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
                 <img
-                  src={assetPath("assets/owner-portrait.png")}
+                  src={assetPath("assets/owner-portrait-enhanced.png")}
                   alt="Josh van Baarle, Owner-Operator"
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover filter sepia-[18%] saturate-[1.1] contrast-125 transition-transform duration-1000 hover:scale-105"
+                  className="w-full h-full object-cover filter sepia-[24%] saturate-[1.12] contrast-125 transition-transform duration-1000 hover:scale-105"
                 />
               </div>
 
