@@ -15,7 +15,7 @@ export function AboutSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="lg:col-span-7 xl:col-span-6 max-w-xl lg:ml-12"
+            className="lg:col-span-8 xl:col-span-7 max-w-2xl lg:ml-12"
           >
             <div className="flex items-center gap-4 mb-4">
               <div className="w-8 h-[1px] bg-primary" />
@@ -25,8 +25,8 @@ export function AboutSection() {
             </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-display uppercase tracking-tight text-white/40 mb-6">
-              The eye of a <span className="text-white">finisher.</span>
-              The care of an <span className="text-white">owner.</span>
+              <span className="block">The eye of a <span className="text-white">finisher.</span></span>
+              <span className="block">The care of an <span className="text-white">owner.</span></span>
             </h2>
             
             <div className="space-y-4 text-muted-foreground font-light leading-relaxed text-sm md:text-base">
@@ -62,7 +62,7 @@ export function AboutSection() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-5 xl:col-span-6 relative flex justify-center lg:justify-end"
+            className="lg:col-span-4 xl:col-span-5 relative flex justify-center lg:justify-end"
           >
             <div className="relative w-full max-w-[18rem] sm:max-w-xs">
               <div className="aspect-[3/4] overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
