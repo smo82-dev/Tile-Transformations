@@ -63,6 +63,15 @@ export function BeforeAfterSection() {
         afterAlt: "After: completed tiled bathroom floor with underfloor heating",
       },
     ],
+    [
+      {
+        title: "Vanity Splash",
+        beforeImage: assetPath("assets/vanity-splash-before.png"),
+        afterImage: assetPath("assets/vanity-splash-after.jfif"),
+        beforeAlt: "Before: bathroom vanity without a tiled splashback",
+        afterAlt: "After: bathroom vanity finished with a tiled splashback",
+      },
+    ],
   ];
 
   return (
