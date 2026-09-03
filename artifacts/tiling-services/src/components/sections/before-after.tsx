@@ -62,8 +62,6 @@ export function BeforeAfterSection() {
         beforeAlt: "Before: underfloor heating installed beneath the bathroom floor",
         afterAlt: "After: completed tiled bathroom floor with underfloor heating",
       },
-    ],
-    [
       {
         title: "Vanity Splash",
         beforeImage: assetPath("assets/vanity-splash-before.png"),
