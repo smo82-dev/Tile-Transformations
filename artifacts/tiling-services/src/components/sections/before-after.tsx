@@ -109,7 +109,7 @@ export function BeforeAfterSection() {
           </motion.p>
         </div>
 
-        <Carousel opts={{ align: "start", watchDrag: false }} className="max-w-6xl mx-auto">
+        <Carousel opts={{ align: "start", loop: true, watchDrag: false }} className="max-w-6xl mx-auto">
           <CarouselContent>
             {transformationSlides.map((slide, slideIndex) => (
               <CarouselItem key={slideIndex}>
