@@ -24,9 +24,9 @@ export function AboutSection() {
               </span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display uppercase tracking-tight text-white/40 mb-6">
-              The eye of a <span className="text-white block">finisher.</span>
-              The care of an <span className="text-white block">owner.</span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-display uppercase tracking-tight text-white/40 mb-6">
+              The eye of a <span className="text-white">finisher.</span>
+              The care of an <span className="text-white">owner.</span>
             </h2>
             
             <div className="space-y-4 text-muted-foreground font-light leading-relaxed text-sm md:text-base">
