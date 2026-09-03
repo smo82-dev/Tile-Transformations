@@ -6,6 +6,7 @@ interface BeforeAfterSliderProps {
   afterImage: string;
   beforeAlt?: string;
   afterAlt?: string;
+  imageFit?: "cover" | "contain";
 }
 
 export function BeforeAfterSlider({
@@ -13,6 +14,7 @@ export function BeforeAfterSlider({
   afterImage,
   beforeAlt = "Before transformation",
   afterAlt = "After transformation",
+  imageFit = "cover",
 }: BeforeAfterSliderProps) {
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
@@ -52,6 +54,8 @@ export function BeforeAfterSlider({
     }
   };
 
+  const imageFitClass = imageFit === "contain" ? "object-contain" : "object-cover";
+
   return (
     <div
       ref={containerRef}
@@ -78,7 +82,7 @@ export function BeforeAfterSlider({
           alt={afterAlt}
           loading="lazy"
           decoding="async"
-          className="w-full h-full object-cover pointer-events-none" 
+          className={`w-full h-full ${imageFitClass} pointer-events-none`}
         />
           <div className="absolute top-6 right-6 bg-primary/95 backdrop-blur-sm border border-primary text-primary-foreground px-5 py-2 text-xs font-bold uppercase tracking-[0.2em]">
           After
@@ -94,7 +98,7 @@ export function BeforeAfterSlider({
           alt={beforeAlt}
           loading="lazy"
           decoding="async"
-          className="w-full h-full object-cover pointer-events-none filter grayscale-[30%]"
+          className={`w-full h-full ${imageFitClass} pointer-events-none filter grayscale-[30%]`}
         />
         <div className="absolute top-6 left-6 bg-background/90 backdrop-blur-sm border border-primary/40 text-foreground px-5 py-2 text-xs font-bold uppercase tracking-[0.2em]">
           Before

@@ -1,8 +1,61 @@
 import { motion } from "framer-motion";
 import { BeforeAfterSlider } from "@/components/ui/before-after-slider";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { assetPath } from "@/lib/asset-path";
 
+type Transformation = {
+  title: string;
+  beforeImage: string;
+  afterImage: string;
+  beforeAlt: string;
+  afterAlt: string;
+  imageFit?: "cover" | "contain";
+};
+
 export function BeforeAfterSection() {
+  const transformationSlides: Transformation[][] = [
+    [
+      {
+        title: "Fireplace Hearth",
+        beforeImage: assetPath("assets/fireplace-before.png"),
+        afterImage: assetPath("assets/fireplace-after.png"),
+        beforeAlt: "Before: worn and damaged tiled fireplace hearth",
+        afterAlt: "After: neatly tiled fireplace hearth",
+      },
+      {
+        title: "Conservatory Floor",
+        beforeImage: assetPath("assets/conservatory-before.png"),
+        afterImage: assetPath("assets/conservatory-after.png"),
+        beforeAlt: "Before: unfinished conservatory floor ready for tiling",
+        afterAlt: "After: patterned black and white tiled conservatory floor",
+      },
+    ],
+    [
+      {
+        title: "SPC Bathroom Floor",
+        beforeImage: assetPath("assets/spc-bathroom-before.jpg"),
+        afterImage: assetPath("assets/spc-bathroom-after.jpg"),
+        beforeAlt: "Before: bathroom prepared for SPC flooring installation",
+        afterAlt: "After: completed bathroom with dark SPC flooring",
+        imageFit: "contain",
+      },
+      {
+        title: "SPC Bathroom Detail",
+        beforeImage: assetPath("assets/spc-bathroom-detail-before.png"),
+        afterImage: assetPath("assets/spc-bathroom-detail-after.png"),
+        beforeAlt: "Before: bathroom with existing fixtures before SPC flooring installation",
+        afterAlt: "After: finished bathroom with new SPC flooring",
+        imageFit: "contain",
+      },
+    ],
+  ];
+
   return (
     <section id="before-after" className="py-32 bg-background relative overflow-hidden border-t border-white/5">
       <div className="container mx-auto px-6 relative z-10">
@@ -40,49 +93,57 @@ export function BeforeAfterSection() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="w-full relative"
-          >
-            <div className="absolute -top-4 -left-4 w-8 h-8 border-t border-l border-white/20" />
-            <div className="absolute -bottom-4 -right-4 w-8 h-8 border-b border-r border-white/20" />
+        <Carousel opts={{ align: "start" }} className="max-w-6xl mx-auto">
+          <CarouselContent>
+            {transformationSlides.map((slide, slideIndex) => (
+              <CarouselItem key={slideIndex}>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+                  {slide.map((transformation, transformationIndex) => (
+                    <motion.div
+                      key={transformation.title}
+                      initial={{ opacity: 0, y: 40 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        delay: transformationIndex * 0.1,
+                        duration: 1,
+                        ease: [0.16, 1, 0.3, 1],
+                      }}
+                      className="w-full relative"
+                    >
+                      <div className="absolute -top-4 -left-4 w-8 h-8 border-t border-l border-white/20" />
+                      <div className="absolute -bottom-4 -right-4 w-8 h-8 border-b border-r border-white/20" />
 
-            <BeforeAfterSlider
-              beforeImage={assetPath("assets/fireplace-before.png")}
-              afterImage={assetPath("assets/fireplace-after.png")}
-              beforeAlt="Before: worn and damaged tiled fireplace hearth"
-              afterAlt="After: neatly tiled fireplace hearth"
+                      <BeforeAfterSlider
+                        beforeImage={transformation.beforeImage}
+                        afterImage={transformation.afterImage}
+                        beforeAlt={transformation.beforeAlt}
+                        afterAlt={transformation.afterAlt}
+                        imageFit={transformation.imageFit}
+                      />
+                      <p className="mt-4 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+                        {transformation.title}
+                      </p>
+                    </motion.div>
+                  ))}
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <div className="flex items-center justify-center gap-4 mt-10">
+            <CarouselPrevious
+              aria-label="Previous work transformations"
+              className="static translate-y-0 rounded-none border-white/20 bg-transparent text-foreground hover:bg-primary hover:text-primary-foreground"
             />
-            <p className="mt-4 text-xs uppercase tracking-[0.2em] text-muted-foreground">
-              Fireplace Hearth
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="w-full relative"
-          >
-            <div className="absolute -top-4 -left-4 w-8 h-8 border-t border-l border-white/20" />
-            <div className="absolute -bottom-4 -right-4 w-8 h-8 border-b border-r border-white/20" />
-
-            <BeforeAfterSlider
-              beforeImage={assetPath("assets/conservatory-before.png")}
-              afterImage={assetPath("assets/conservatory-after.png")}
-              beforeAlt="Before: unfinished conservatory floor ready for tiling"
-              afterAlt="After: patterned black and white tiled conservatory floor"
+            <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
+              More work
+            </span>
+            <CarouselNext
+              aria-label="Next work transformations"
+              className="static translate-y-0 rounded-none border-white/20 bg-transparent text-foreground hover:bg-primary hover:text-primary-foreground"
             />
-            <p className="mt-4 text-xs uppercase tracking-[0.2em] text-muted-foreground">
-              Conservatory Floor
-            </p>
-          </motion.div>
-        </div>
+          </div>
+        </Carousel>
       </div>
     </section>
   );
