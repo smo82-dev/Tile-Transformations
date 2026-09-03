@@ -71,7 +71,7 @@ export function AboutSection() {
                   alt="Josh van Baarle, Owner-Operator"
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover filter sepia-[12%] saturate-[1.08] contrast-125 transition-transform duration-1000 hover:scale-105"
+                  className="w-full h-full object-cover filter sepia-[18%] saturate-[1.1] contrast-125 transition-transform duration-1000 hover:scale-105"
                 />
               </div>
 
