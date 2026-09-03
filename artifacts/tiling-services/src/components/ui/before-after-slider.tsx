@@ -59,7 +59,7 @@ export function BeforeAfterSlider({
   return (
     <div
       ref={containerRef}
-      className="relative w-full aspect-[3/2] overflow-hidden rounded-none shadow-[0_20px_50px_rgba(0,0,0,0.5)] cursor-ew-resize select-none border border-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+      className="relative w-full aspect-[3/2] overflow-hidden rounded-none shadow-[0_20px_50px_rgba(0,0,0,0.5)] cursor-ew-resize select-none touch-none border border-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
       onMouseDown={(e) => handlePointerDown(e.clientX)}
       onMouseMove={handleMouseMove}
       onMouseUp={handlePointerUp}
