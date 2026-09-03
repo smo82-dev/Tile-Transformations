@@ -93,9 +93,9 @@ export function BeforeAfterSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-4xl md:text-6xl font-display uppercase tracking-tight text-foreground"
+              className="text-4xl md:text-6xl font-display uppercase tracking-tight text-white/40"
             >
-              From tired to <span className="text-white/40">timeless</span>.
+              From tired to <span className="text-white">timeless</span>.
             </motion.h2>
           </div>
           <motion.p 
