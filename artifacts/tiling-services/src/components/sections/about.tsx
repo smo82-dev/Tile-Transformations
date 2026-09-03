@@ -3,12 +3,12 @@ import { assetPath } from "@/lib/asset-path";
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-20 md:py-24 bg-secondary relative overflow-hidden border-t border-white/5">
+    <section id="about" className="py-14 sm:py-16 md:py-20 bg-secondary relative overflow-hidden border-t border-white/5">
 
       <div className="absolute -left-[10%] top-0 w-[40%] h-full bg-background transform -skew-x-12 opacity-50 z-0 hidden lg:block" />
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
 
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
@@ -17,19 +17,19 @@ export function AboutSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="lg:col-span-7 xl:col-span-6 max-w-xl lg:ml-12"
           >
-            <div className="flex items-center gap-4 mb-6">
+            <div className="flex items-center gap-4 mb-4">
               <div className="w-8 h-[1px] bg-primary" />
               <span className="text-primary font-bold tracking-[0.2em] uppercase text-xs">
                 About the Craftsman
               </span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-display uppercase tracking-tight text-white/40 mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display uppercase tracking-tight text-white/40 mb-6">
               The eye of a <span className="text-white block">finisher.</span>
               The care of an <span className="text-white block">owner.</span>
             </h2>
             
-            <div className="space-y-6 text-muted-foreground font-light leading-relaxed text-sm md:text-base">
+            <div className="space-y-4 text-muted-foreground font-light leading-relaxed text-sm md:text-base">
               <p>
                 I'm <strong className="text-foreground font-medium">Josh van Baarle</strong>, the founder and owner-operator of Tiling Services Ltd. When you hire us, you don't get a corporate fleet or a rotating cast of sub-contractors—you get me.
               </p>
@@ -41,17 +41,17 @@ export function AboutSection() {
               </p>
             </div>
 
-            <div className="mt-10 pt-10 border-t border-white/5 flex flex-wrap gap-8">
+            <div className="mt-8 pt-8 border-t border-white/5 flex flex-wrap gap-6">
               <div>
-                <h4 className="text-4xl font-display text-primary mb-2">5+</h4>
+                <h4 className="text-3xl font-display text-primary mb-1">5+</h4>
                 <span className="text-xs uppercase tracking-[0.2em] text-foreground/60">Years Exp</span>
               </div>
               <div>
-                <h4 className="text-4xl font-display text-primary mb-2">100%</h4>
+                <h4 className="text-3xl font-display text-primary mb-1">100%</h4>
                 <span className="text-xs uppercase tracking-[0.2em] text-foreground/60">Owner-Operated</span>
               </div>
               <div>
-                <h4 className="text-4xl font-display text-primary mb-2">✓</h4>
+                <h4 className="text-3xl font-display text-primary mb-1">✓</h4>
                 <span className="text-xs uppercase tracking-[0.2em] text-foreground/60">Fully Qualified</span>
               </div>
             </div>
@@ -64,7 +64,7 @@ export function AboutSection() {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-5 xl:col-span-6 relative flex justify-center lg:justify-end"
           >
-            <div className="relative w-full max-w-xs">
+            <div className="relative w-full max-w-[18rem] sm:max-w-xs">
               <div className="aspect-[3/4] overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
                 <img
                   src={assetPath("assets/owner-portrait.png")}
