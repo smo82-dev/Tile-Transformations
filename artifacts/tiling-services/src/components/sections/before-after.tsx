@@ -73,7 +73,7 @@ export function BeforeAfterSection() {
   ];
 
   return (
-    <section id="before-after" className="py-32 bg-background relative overflow-hidden border-t border-white/5">
+    <section id="before-after" className="pt-32 pb-16 bg-background relative overflow-hidden border-t border-white/5">
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
           <div className="max-w-3xl">
