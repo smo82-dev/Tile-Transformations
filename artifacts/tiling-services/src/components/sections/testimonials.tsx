@@ -41,6 +41,7 @@ const reviews: Review[] = [
     highlight: "master of his craft",
     image: assetPath("assets/emily-conservatory-floor.jpg"),
     imageAlt: "Black and white patterned tiled floor in a bright conservatory",
+    imageClassName: "object-[center_35%]",
   },
 ];
 
