@@ -45,7 +45,7 @@ export function BeforeAfterSection() {
         afterAlt: "After: completed tiled bathroom floor with underfloor heating",
       },
       {
-        title: "SPC Bathroom Detail",
+        title: "Laminate Bathroom Floor",
         beforeImage: assetPath("assets/spc-bathroom-detail-before.png"),
         afterImage: assetPath("assets/spc-bathroom-detail-after.png"),
         beforeAlt: "Before: bathroom with existing fixtures before SPC flooring installation",
