@@ -30,7 +30,7 @@ const services = [
   },
   {
     num: "03",
-    title: "Repairs & Maint.",
+    title: "Repairs & Maintenance",
     description: "Restoring and preserving your investment.",
     features: [
       "Tile repairs & replacement",
