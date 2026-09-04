@@ -10,6 +10,7 @@ type Review = {
   image: string;
   imageAlt: string;
   imageClassName?: string;
+  sourceLabel?: string;
 };
 
 const reviews: Review[] = [
@@ -49,6 +50,7 @@ const reviews: Review[] = [
     highlight: "precise and painstaking",
     image: assetPath("assets/kerry-greg-bathroom-splash.jpg"),
     imageAlt: "Bathroom vanity with a navy blue tiled splashback",
+    sourceLabel: "Testimonial",
   },
 ];
 
@@ -252,7 +254,9 @@ export function TestimonialsSection() {
                               <Star key={starIndex} className="w-3 h-3 fill-current" aria-hidden="true" />
                             ))}
                           </div>
-                          <p className="text-muted-foreground font-light text-xs tracking-widest">Google Review</p>
+                          <p className="text-muted-foreground font-light text-xs tracking-widest">
+                            {review.sourceLabel ?? "Google Review"}
+                          </p>
                         </div>
                       </div>
                     </div>
