@@ -35,6 +35,13 @@ const reviews: Review[] = [
     image: assetPath("assets/betty-fireplace-hearth.webp"),
     imageAlt: "Stone tiled feature wall and hearth around a wood burner",
   },
+  {
+    name: "Emily",
+    text: "The end result is a dream. It's perfect and I know it was a challenge. Josh is a top quality tiler and a master of his craft. Cannot recommend enough. Thank you so much Josh (I'll be back for the bathroom when I can!)",
+    highlight: "master of his craft",
+    image: assetPath("assets/emily-conservatory-floor.jpg"),
+    imageAlt: "Black and white patterned tiled floor in a bright conservatory",
+  },
 ];
 
 function ReviewQuote({ review }: { review: Review }) {
