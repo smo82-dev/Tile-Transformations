@@ -31,7 +31,7 @@ export function AboutSection() {
             
             <div className="space-y-4 text-muted-foreground font-light leading-relaxed text-sm md:text-base">
               <p>
-                I'm <strong className="text-foreground font-medium">Josh van Baarle</strong>, the founder and owner-operator of Tiling Services Ltd. When you hire us, you don't get a corporate fleet or a rotating cast of sub-contractors—you get me.
+                I'm <strong className="text-foreground font-medium">Josh van Baarle</strong>, the founder and owner-operator of Tiling Services Ltd. When you hire us, you don't get a corporate fleet or a rotating cast of sub-contractors, you get me.
               </p>
               <p>
                 With over 5 years of industry experience and full qualifications, I've built this business on a simple philosophy: "Here to Serve". That means reliable communication, immense attention to detail, and work that stands the test of time.
