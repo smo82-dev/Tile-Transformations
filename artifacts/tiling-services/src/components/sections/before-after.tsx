@@ -22,18 +22,18 @@ export function BeforeAfterSection() {
   const transformationSlides: Transformation[][] = [
     [
       {
-        title: "Fireplace Hearth",
-        beforeImage: assetPath("assets/fireplace-before.png"),
-        afterImage: assetPath("assets/fireplace-after.png"),
-        beforeAlt: "Before: worn and damaged tiled fireplace hearth",
-        afterAlt: "After: neatly tiled fireplace hearth",
-      },
-      {
         title: "Conservatory Floor",
         beforeImage: assetPath("assets/conservatory-before.png"),
         afterImage: assetPath("assets/conservatory-after.png"),
         beforeAlt: "Before: unfinished conservatory floor ready for tiling",
         afterAlt: "After: patterned black and white tiled conservatory floor",
+      },
+      {
+        title: "Fireplace Hearth",
+        beforeImage: assetPath("assets/fireplace-before.png"),
+        afterImage: assetPath("assets/fireplace-after.png"),
+        beforeAlt: "Before: worn and damaged tiled fireplace hearth",
+        afterAlt: "After: neatly tiled fireplace hearth",
       },
     ],
     [
