@@ -52,6 +52,14 @@ const reviews: Review[] = [
     imageAlt: "Bathroom vanity with a navy blue tiled splashback",
     sourceLabel: "Testimonial",
   },
+  {
+    name: "Nathan and Janene",
+    text: "I am genuinely impressed by the quality of the tiling work on our kitchen splashback. The lines are sharp, the spacing is precise, and the overall finish completely elevates the kitchen. The work was done to a very high standard, everything was left tidy, and we are really happy with it. Five-star service!",
+    highlight: "Five-star service!",
+    image: assetPath("assets/nathan-janene-kitchen-splash.jpg"),
+    imageAlt: "Bright kitchen with a white tiled splashback",
+    sourceLabel: "Testimonial",
+  },
 ];
 
 function ReviewQuote({ review }: { review: Review }) {
