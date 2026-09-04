@@ -43,6 +43,13 @@ const reviews: Review[] = [
     imageAlt: "Black and white patterned tiled floor in a bright conservatory",
     imageClassName: "object-[center_35%]",
   },
+  {
+    name: "Kerry and Greg",
+    text: "Josh had good ideas to suggest and helped us get the best out of the project. His work was precise and painstaking and the finished result looks superb. We were very happy with this small project and would warmly recommend Josh to anyone who might be looking for a skilled tiler.",
+    highlight: "precise and painstaking",
+    image: assetPath("assets/kerry-greg-bathroom-splash.jpg"),
+    imageAlt: "Bathroom vanity with a navy blue tiled splashback",
+  },
 ];
 
 function ReviewQuote({ review }: { review: Review }) {
