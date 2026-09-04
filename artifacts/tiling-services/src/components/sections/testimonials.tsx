@@ -58,6 +58,7 @@ const reviews: Review[] = [
     highlight: "Five-star service!",
     image: assetPath("assets/nathan-janene-kitchen-splash.jpg"),
     imageAlt: "Bright kitchen with a white tiled splashback",
+    imageClassName: "object-[center_35%]",
     sourceLabel: "Testimonial",
   },
 ];
