@@ -55,7 +55,7 @@ export function BeforeAfterSection() {
     ],
     [
       {
-        title: "SPC Bathroom Floor",
+        title: "Laminate Bathroom Floor #2",
         beforeImage: assetPath("assets/spc-bathroom-before.jpg"),
         afterImage: assetPath("assets/spc-bathroom-after.jpg"),
         beforeAlt: "Before: bathroom prepared for SPC flooring installation",
