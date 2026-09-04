@@ -103,7 +103,7 @@ export function ServicesSection() {
                 <div className="text-primary/50 font-display text-5xl font-bold mb-8 transition-colors duration-500 group-hover:text-primary">
                   {service.num}
                 </div>
-                <h3 className="text-2xl font-display uppercase tracking-widest text-foreground mb-4">
+                <h3 className="text-lg font-display uppercase tracking-widest text-foreground mb-4 whitespace-nowrap">
                   {service.title}
                 </h3>
                 <p className="text-muted-foreground font-light mb-10 text-sm leading-relaxed max-w-sm">
