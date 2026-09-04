@@ -1,5 +1,11 @@
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export function ContactSection() {
   return (
@@ -114,6 +120,50 @@ export function ContactSection() {
             </motion.div>
 
           </div>
+
+          <Accordion type="single" collapsible className="mt-16 border-t border-white/10">
+            <AccordionItem value="promotional-terms" className="border-b border-white/10">
+              <AccordionTrigger className="py-5 text-left font-display text-sm font-bold uppercase tracking-[0.15em] text-foreground hover:no-underline">
+                Promotional Terms &amp; Conditions
+              </AccordionTrigger>
+              <AccordionContent>
+                <div className="max-w-4xl space-y-5 text-sm font-light leading-relaxed text-muted-foreground">
+                  <div>
+                    <p className="text-foreground">Terms &amp; Conditions – Free Coffee with Your Free Quote</p>
+                    <p>Tiling Services Ltd – Tauranga Region</p>
+                  </div>
+
+                  <div>
+                    <p className="mb-2 text-foreground">Promotion Partnership:</p>
+                    <p>
+                      This promotion is offered in partnership with the coffee cart located at Wairoa Bridge.
+                      The coffee cart operates Monday to Friday, 6:00am–1:00pm, excluding public holidays.
+                      Customers wishing to redeem their complimentary coffee should do so during the coffee
+                      cart’s operating hours.
+                    </p>
+                  </div>
+
+                  <ul className="list-disc space-y-2 pl-5">
+                    <li>This promotion is available to customers requesting a free tiling quote from Tiling Services Ltd.</li>
+                    <li>Customers will receive 1 complimentary coffee with each eligible free quote, which can be redeemed at the coffee cart once the quote has been completed.</li>
+                    <li>The promotion is available within the Tauranga region only.</li>
+                    <li>One (1) coffee per quote. Multiple coffees cannot be claimed for the same quote.</li>
+                    <li>The complimentary coffee is available to the person requesting the quote and is not transferable or redeemable for cash.</li>
+                    <li>The free coffee is subject to the coffee cart’s availability and operating hours.</li>
+                    <li>A free quote must be requested and completed in order to qualify for the promotion.</li>
+                    <li>This promotion cannot be combined with any other offer unless agreed to by Tiling Services Ltd.</li>
+                    <li>Tiling Services Ltd reserves the right to modify, suspend, or end the promotion at any time without prior notice.</li>
+                    <li>By requesting a free quote, customers agree to these terms and conditions.</li>
+                  </ul>
+
+                  <p className="border-l border-primary/50 pl-4 text-foreground/80">
+                    Promotion applies to eligible free quotes within the Tauranga region. One coffee per quote.
+                    Coffee available Monday–Friday, 6:00am–1:00pm, excluding public holidays.
+                  </p>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </div>
     </section>
